@@ -1,6 +1,6 @@
 # STEP parser
 
-This file records how the parser produces the schema-1 document in `requirements.md`. It does not add JSON fields. The Revit family builder is out of scope here; it still only reads that document, inside Revit on Windows.
+This file records how the parser produces the schema-1 document in `requirements.md`. It does not add JSON fields. The family builder is recorded in `builder.md`. It still only reads that document, inside Revit on Windows.
 
 ## Kernel
 
