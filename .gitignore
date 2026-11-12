@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Kiroween requires the .kiro tree to stay in git. These negations are last
+# so they win over any earlier rule that would exclude it. The Python
+# template pattern *.spec matches filenames ending in .spec; it does not
+# match .kiro/specs/. Do not remove the negations below.
+!.kiro/
+!.kiro/**

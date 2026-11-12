@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "step2revit"
+version = "0.1.0"
+description = "Convert STEP hardware parts into parametric Revit families with free and open-source tools."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "QQ578525155" }]
+keywords = ["step", "revit", "bim", "cad"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/QQ578525155/STEP2Revit"
+Repository = "https://github.com/QQ578525155/STEP2Revit"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["step2revit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
