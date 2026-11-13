@@ -19,7 +19,7 @@ Revit is the host application for the family builder. The repository does not re
 
 ## Where the pipeline runs
 
-- The parser is cross-platform Python and runs on Windows, macOS, and Linux. pythonOCC, OCP, and CadQuery are allowed later. They are not dependencies of this scaffold.
+- The parser is cross-platform Python and runs on Windows, macOS, and Linux. It depends on `cadquery-ocp` (OCP, Apache-2.0), which binds Open CASCADE. CI installs that wheel; parser tests stay headless and do not open a display. pythonOCC and CadQuery remain allowed alternatives and are not required.
 - The family builder runs inside Revit on Windows. It reads the neutral JSON and does not read STEP.
 
 ## Checks

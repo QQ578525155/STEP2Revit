@@ -1,6 +1,6 @@
 # STEP to parametric Revit family
 
-Requirements only. `design.md` and `tasks.md` are intentionally absent, so this scaffold does not prescribe an implementation. Later changes follow this file as the contract between the STEP parser and the Revit family builder.
+This file is the contract between the STEP parser and the Revit family builder. `design.md` records how the parser recognizes a cylinder, a hole, and an extrusion, and which free geometry kernel it uses. Those choices have to emit the document defined here; they are not a second schema. `tasks.md` is intentionally absent.
 
 ## Introduction
 
@@ -183,7 +183,7 @@ A plate extruded along Z uses the parallel-axis frame, so profile `(u, v)` is wo
 - Nested families, mates, joints, and motion.
 - Drawings, PMI, GD&T, layers, materials, and textures.
 - MEP connectors and editing an existing `.rfa` back into STEP.
-- How a later change recognizes a hole or chooses a geometric kernel. Those choices have to emit this document; they are not specified here.
+- How a later change recognizes a hole or chooses a geometric kernel. Those choices have to emit this document. The parser's current choice is `design.md`, and it is not part of the JSON contract.
 
 ## Evolution
 

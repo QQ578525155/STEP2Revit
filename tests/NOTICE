@@ -1,0 +1,7 @@
+The STEP files used by the tests are generated at runtime by tests/step_samples.py.
+That generator is MIT licensed, the same as this repository.
+
+It builds box, cylinder, and plate-with-hole solids with Open CASCADE primitives
+from cadquery-ocp (Apache-2.0) and writes them with that package's STEP writer.
+No third-party STEP file is downloaded or committed. Do not replace these
+samples with a file whose license is not Apache-2.0, MIT, or CC0.
