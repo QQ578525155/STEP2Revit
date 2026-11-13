@@ -18,6 +18,8 @@ KIRO_PATHS = (
     ".kiro/steering/tech.md",
     ".kiro/steering/structure.md",
     ".kiro/specs/step-to-rfa-pipeline/requirements.md",
+    ".kiro/specs/step-to-rfa-pipeline/design.md",
+    ".kiro/specs/step-to-rfa-pipeline/builder.md",
     ".kiro/hooks/foss-and-kiro-tracking.json",
 )
 

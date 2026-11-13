@@ -12,6 +12,6 @@ The pipeline has three stages:
 2. Write one neutral JSON document that records the solids, the bounding dimensions, and the key features and parameters.
 3. Build one parametric `.rfa` from that JSON document alone.
 
-The JSON document is the only hand-off between the parser and the family builder. Both sides follow `.kiro/specs/step-to-rfa-pipeline/requirements.md`. The parser writes that document from a STEP file. The family builder is not in this repository; it runs inside Revit on Windows.
+The JSON document is the only hand-off between the parser and the family builder. Both sides follow `.kiro/specs/step-to-rfa-pipeline/requirements.md`. The parser writes that document from a STEP file. The family builder is `revit/STEP2Revit.extension` and runs inside Revit on Windows. The repository does not run Revit and does not ship a generated `.rfa`.
 
 The project is MIT-licensed and is entered in the Devpost Kiroween 2026 hackathon, Frankenstein category. Kiro project files under `.kiro/` are part of the product and stay in git.

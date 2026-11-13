@@ -20,7 +20,7 @@ Revit is the host application for the family builder. The repository does not re
 ## Where the pipeline runs
 
 - The parser is cross-platform Python and runs on Windows, macOS, and Linux. It depends on `cadquery-ocp` (OCP, Apache-2.0), which binds Open CASCADE. CI installs that wheel; parser tests stay headless and do not open a display. pythonOCC and CadQuery remain allowed alternatives and are not required.
-- The family builder runs inside Revit on Windows. It reads the neutral JSON and does not read STEP.
+- The family builder runs inside Revit on Windows. It reads the neutral JSON and does not read STEP. Its plan (`step2revit.family_plan`) is pure Python and is what CI tests, together with the session boundary in `step2revit.family_session`. `step2revit.revit_host` imports the Revit API only when a family is built inside Revit. pyRevit is the free host. CI does not install Revit and does not write a `.rfa`.
 
 ## Checks
 
