@@ -1,0 +1,26 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Keep .kiro tracked and stay FOSS-only",
+      "description": "On session start, remind the agent that .kiro stays committed and that dependencies stay free and open source.",
+      "enabled": true,
+      "trigger": "SessionStart",
+      "action": {
+        "type": "agent",
+        "prompt": "STEP2Revit is free and open source. Keep the entire .kiro directory committed, and never gitignore .kiro or anything under it. Add only free and open-source libraries and free GitHub Actions. Do not add paid APIs, paid converters, or proprietary geometry kernels. The STEP parser stays cross-platform Python. The Revit family builder runs inside Revit on Windows and is not a paid web service. Follow the pipeline contract in .kiro/specs/step-to-rfa-pipeline/requirements.md."
+      }
+    },
+    {
+      "name": "Reject gitignore rules that drop .kiro",
+      "description": "When .gitignore is saved, remind the agent to keep .kiro tracked.",
+      "enabled": true,
+      "trigger": "PostFileSave",
+      "matcher": "(^|[/\\\\])\\.gitignore$",
+      "action": {
+        "type": "agent",
+        "prompt": "A .gitignore file was saved. Confirm no rule ignores .kiro or any path under .kiro. Kiroween requires that tree to be committed. The Python template pattern *.spec matches filenames that end in .spec; it does not match the .kiro/specs directory. Keep the trailing !.kiro/ and !.kiro/** negations so .kiro stays tracked."
+      }
+    }
+  ]
+}
